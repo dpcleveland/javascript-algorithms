@@ -17,3 +17,4 @@ for (var i = 1; i <= size; i++) {
 console.log(board);
 
 // Eloquent JavaScript solution is pretty much the same
+// They just used different var names and started at 0 instead of 1
