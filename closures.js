@@ -27,6 +27,7 @@ function multiplier(factor) {
 
 var twice = multiplier(2);
 console.log(twice(5));
+// -> 10
 
 /////////////////////////
 
@@ -38,3 +39,34 @@ function subtractor(minusThis) {
 
 var subtracted = subtractor(5);
 console.log(subtracted(3));
+// -> -2
+
+/////////////////////////
+
+function numberGenerator() {
+    var num = 1;
+    function checkNumber() {
+        console.log(num);
+    }
+    num++;
+    return checkNumber;
+}
+
+var number = numberGenerator();
+number();
+// -> 2
+
+/////////////////////////
+
+function sayHello() {
+    var say = function() {
+        console.log(hello);
+    }
+    var hello = "Hello, world!";
+    return say;
+}
+var sayHelloClosure = sayHello();
+sayHelloClosure();
+// -> Hello, world!
+
+/////////////////////////
