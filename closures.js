@@ -13,5 +13,28 @@ var wrap2 = wrapValue(2);
 
 console.log(wrap1());
 // -> 1
+
 console.log(wrap2());
 // -> 2
+
+/////////////////////////
+
+function multiplier(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+
+var twice = multiplier(2);
+console.log(twice(5));
+
+/////////////////////////
+
+function subtractor(minusThis) {
+    return function(value) {
+        return value - minusThis;
+    };
+}
+
+var subtracted = subtractor(5);
+console.log(subtracted(3));
