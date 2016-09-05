@@ -24,3 +24,19 @@ console.log("football" in descriptions);
 // -> false
 console.log("work" in descriptions);
 // -> true
+
+var journal = [
+    {
+        events: ["work", "touched tree", "pizza", "running", "television"],
+        squirrel: false
+    },
+    {
+        events: ["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"],
+        squirrel: false
+    },
+    {
+        events: ["weekend", "cycling", "break", "peanuts", "beer"],
+        squirrel: true
+    }
+];
+console.log(journal[0].events[2]);
