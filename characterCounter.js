@@ -10,10 +10,22 @@ function countBs(bString) {
 
 console.log(countBs("BBC"));
 
-/*
-function countChar(anyString, char) {
 
+function countChar(anyString, char) {
+    var total = 0;
+    for (var i = 0; i < anyString.length; i++) {
+        if (anyString.charAt(i) === char) {
+            total += 1;
+        }
+    }
+    return total;
 }
 
 console.log(countChar("kakkerlak", "k"));
+
+// Combined closure
+/*
+function countBs(string) {
+    return countChar(string, "B");
+}
 */
