@@ -60,6 +60,13 @@ return list;
 function nth(nthList, number) {
 // INPUT -> A list and a number
 // OUTPUT -> The element at the given position in the list or undefined when there is no such element
+
+    if (!nthList)
+        return undefined;
+    else if (number == 0)
+        return nthList.value;
+    else
+        return nth(nthList.rest, number - 1);
 }
 
 console.log(arrayToList([1, 2, 3]));
