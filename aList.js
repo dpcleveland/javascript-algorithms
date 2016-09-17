@@ -39,17 +39,27 @@ function listToArray(list) {
     for (var node = list; node; node = node.rest) {
         array.push(node.value);
     }
-    
+
     return array;
 
 }
 
 function prepend(element, prependList) {
+// INPUT -> Element and a list
+// OUTPUT -> New list that adds the element to the front of the input list
+
+var list = {
+    value: element,
+    rest: prependList
+};
+
+return list;
 
 }
 
 function nth(nthList, number) {
-
+// INPUT -> A list and a number
+// OUTPUT -> The element at the given position in the list or undefined when there is no such element
 }
 
 console.log(arrayToList([1, 2, 3]));
