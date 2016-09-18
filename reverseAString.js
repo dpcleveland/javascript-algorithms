@@ -2,10 +2,10 @@
 
 function reverseString(str) {
     // split() returns an array on which reverse() and join() can be applied
-    var strReverse = str.split('').reverse().join('');
+    str = str.split('').reverse().join('');
 
     return str;
-    //console.log(strReverse);
+    //console.log(str);
 }
 
 reverseString("hello");
