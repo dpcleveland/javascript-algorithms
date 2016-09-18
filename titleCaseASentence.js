@@ -22,3 +22,24 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
+
+/* Refactored
+
+function titleCase(str) {
+  var lower = str.toLowerCase();
+
+  var splitStr = lower.split(" ");
+
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+
+  }
+
+  return splitStr.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+titleCase("sHoRt AnD sToUt");
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT");
+
+*/
