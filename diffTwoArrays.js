@@ -1,7 +1,25 @@
 function diffArray(arr1, arr2) {
-    var newArr = [];
 
+    function includesItems(array) {
 
+    }
+
+    for (var i = 0; i < arr1.length; i++) {
+
+    }
+
+    var filterArray1 = arr1.filter(includesItems(arr2));
+
+    var filterArray2 = arr2.filter(includesItems(arr1));
+
+    var newArr = filterArray1.concat(filterArray2);
+
+    /*
+        Array.slice();
+        Array.filter();
+        Array.indexOf();
+        Array.concat();
+    */
     return newArr;
 }
 

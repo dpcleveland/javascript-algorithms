@@ -20,3 +20,19 @@ function noisy(f) {
 noisy(Boolean)(0);
 // -> calling with 0
 // -> called with 0 - got false
+
+// Functions that provide new types of control flow
+function unless(test, then) {
+    if (!test) then();
+}
+
+function repeat(times, body) {
+    for (var i = 0; i < times; i++) body(i);
+}
+repeat(3, function(n) {
+    unless(n % 2, function() {
+        console.log(n, "is even");
+    });
+});
+// -> 0 is even
+// -> 2 is even
